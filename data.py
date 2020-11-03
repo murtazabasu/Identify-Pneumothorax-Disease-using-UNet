@@ -27,12 +27,10 @@ class SIIM_ACRDataset(torch.utils.data.Dataset):
         preprocessing_fn=None):
         """
         Dataset class for segmentation problem
-        :param image_ids: ids of the image, list
-        :param transform: True/False, no transform in validation
-        :param preprocessing_fn: a function for preprocessing image
+        -> image_ids: ids of the image, list
+        -> transform: True/False, no transform in validation
+        -> preprocessing_fn: a function for preprocessing image
         """
-        # we create a empty dictionary 
-        # and mask paths
         self.data = defaultdict(dict)
         self.counter = 0
         
@@ -46,11 +44,11 @@ class SIIM_ACRDataset(torch.utils.data.Dataset):
         self.preprocessing_fn = preprocessing_fn
 
         # albumentation augmentation
-        # we have shift, scale & rotate
-        # applied with 80% probability
-        # and then one of gamma and brightness/contrast
-        # is applied to the image
-        # albumentation takes care of which augmentation
+        # have shift, scale & rotate features
+        # and is applied with 80% probability.
+        # Gamma controls the and brightness /
+        # contrast i.e. applied to the image.
+        # Albumentation takes care of which augmentation
         # is applied to image and mask
         self.aug = Compose(
             [
@@ -121,9 +119,8 @@ class SIIM_ACRDataset(torch.utils.data.Dataset):
             img = augmented["image"]
             mask = augmented["mask"]
         
-        # preprocess the image using provided 
-        # preprocessing tensors tis is manually
-        # image normalization
+        # image normalization using preprocessing
+        # tensors.
         img = self.preprocessing_fn(img)
 
         # return image and mask tensors
