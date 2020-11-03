@@ -1,6 +1,6 @@
-# Coordinating Two UR5 Robots for a pick and place task
+# Identify Pneumothorax Disease using UNet
 <p align="center">
-<img src="https://github.com/murtazabasu/Identify-Pneumothorax-Disease-using-UNet/tree/master/media/media.PNG" width="650">
+<img src="https://github.com/murtazabasu/Identify-Pneumothorax-Disease-using-UNet/blob/master/media/media.PNG" width="650">
 
 Pneumothorax can be caused by a blunt chest injury, damage from underlying lung disease, or most horrifying—it may occur for no obvious reason at all. On some occasions, a collapsed lung can be a life-threatening event. Pneumothorax is usually diagnosed by a radiologist on a chest x-ray, and can sometimes be very difficult to confirm. An accurate AI algorithm to detect pneumothorax would be useful in a lot of clinical scenarios. AI could be used to triage chest radiographs for priority interpretation, or to provide a more confident diagnosis for non-radiologists.
 
