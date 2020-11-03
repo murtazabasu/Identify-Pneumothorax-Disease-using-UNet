@@ -8,9 +8,9 @@ def double_conv(in_channels, out_channels):
     """
     This function applies to convolution layers
     each followed by a ReLU activation function
-    :param in_channels: number of input channels
-    :param out_channels: number of output channels
-    :return: a down conv layer
+    -> in_channels: number of input channels
+    -> out_channels: number of output channels
+    -> a down conv layer
     """
     conv = nn.Sequential(
         nn.Conv2d(in_channels, out_channels, kernel_size=3),
@@ -28,9 +28,9 @@ def crop_tensor(tensor, target_tensor):
     implementation that might not be applicable to all networks
     all other use-cases.
     Both tensors are of shape (bs, c, h, w)
-    :param tensor: a tensor tat needs to be cropped
-    :param target_tensor: target tensor of smaller size
-    :return: cropped tensor 
+    -> tensor: a tensor tat needs to be cropped
+    -> target_tensor: target tensor of smaller size
+    -> cropped tensor 
     """
     target_size = target_tensor.size()[2]
     tensor_size = tensor.size()[2]
