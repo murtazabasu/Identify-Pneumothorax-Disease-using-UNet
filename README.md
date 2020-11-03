@@ -9,9 +9,9 @@ In this repository a model is developed using UNet with the help of Convolution 
 #### Criterion for using this repository:
 - This project was tested on Python 3.7 using Conda Distribution
 - Choose the `num_workers` for parallelizing the training and validation dataset using pytorch based on your system specification.
-- If your cuda memory gets full, try resize the images using `img_resize` argument and also try decreasing the batch size for training.
+- If your cuda memory gets full, try resizing the images using `img_resize` argument and also try decreasing the batch size for training.
 
-#### Criterion for using this repository:
+#### Requirements
 Install the following packages:
 - NVIDIA Apex for mixed precision training. If you have a single GPU then normal `loss.backward()` should suffice, therefore you can avoid this installation. 
 ```
