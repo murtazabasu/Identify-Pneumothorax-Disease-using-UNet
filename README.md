@@ -13,7 +13,7 @@ In this repository a model is developed using UNet with the help of Convolution 
 
 #### Criterion for using this repository:
 Install the following packages:
-- NVIDIA Apex for mixesd precision training. If you have a single GPU then normal `loss.backward()` should suffice, therefore you can avoid this installation. 
+- NVIDIA Apex for mixed precision training. If you have a single GPU then normal `loss.backward()` should suffice, therefore you can avoid this installation. 
 ```
 git clone https://github.com/NVIDIA/apex
 pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./apex
